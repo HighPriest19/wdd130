@@ -1,29 +1,28 @@
 /* === CSS Variables for Color and Fonts === */
 :root {
-    --primary-color: #0a2f35;       /* Deep green-blue for headers */
-    --secondary-color: #ffffff;     /* White for contrast */
-    --accent1-color: #2e8b57;       /* Sea green (can be used for backgrounds) */
-    --accent2-color: #f2f2f2;       /* Light gray for text or background */
+    --primary-color: #0a2f35;
+    --secondary-color: #ffffff;
+    --accent1-color: #2e8b57;
+    --accent2-color: #f2f2f2;
   
-    --heading-font: 'Georgia', serif;
-    --body-font: 'Arial', sans-serif;
+    --heading-font: 'Roboto Slab', serif;
+    --body-font: 'Roboto', sans-serif;
   }
   
-  /* === Box Model Reset === */
+  /* === Reset === */
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* === Body Styling === */
   body {
     font-family: var(--body-font);
     color: var(--accent1-color);
     background-color: #fff;
   }
   
-  /* === Page Container Styling === */
+  /* === Page Container === */
   header, main, footer {
     width: 840px;
     margin: 0 auto;
@@ -35,34 +34,46 @@
     color: var(--primary-color);
   }
   
-  /* === Spacing for Key Elements === */
+  /* === General Spacing === */
   nav, p, section, article {
     margin: 16px;
     padding: 8px;
   }
   
-  /* === Navigation Bar === */
-  nav {
+  /* === Header Grid Layout === */
+  header {
+    display: grid;
+    grid-template-columns: 120px 1fr 2fr;
+    align-items: center;
+    gap: 16px;
     background-color: var(--primary-color);
-    padding: 10px;
+    padding: 12px;
+    color: var(--secondary-color);
+  }
+  
+  header img {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* === Navigation Flex === */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    margin: 0 10px;
   }
   
   nav a {
     color: var(--secondary-color);
     text-decoration: none;
-    margin-right: 12px;
     font-weight: bold;
-  }
-  
-  /* === Social Media Links (Footer) === */
-  .socialmedia a {
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  
-  .socialmedia img {
-    width: 24px;
-    height: auto;
   }
   
   /* === Hero Section === */
@@ -88,7 +99,7 @@
     font-size: 2em;
   }
   
-  /* === Hero Article Overlay === */
+  /* === Hero Article === */
   .hero article {
     position: absolute;
     bottom: 20px;
@@ -107,22 +118,55 @@
     border-radius: 8px;
   }
   
-  /* === Adventure Section Images === */
-  section img {
+  /* === Adventure Section === */
+  .adventures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 16px;
+  }
+  
+  .adventures figure {
+    margin: 12px;
+    text-align: center;
     width: 180px;
+  }
+  
+  .adventures img {
+    width: 100%;
     height: auto;
-    margin: 8px;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    display: inline-block;
-    vertical-align: middle;
+  }
+  
+  .adventures figcaption {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: var(--primary-color);
   }
   
   /* === Footer === */
   footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    text-align: center;
-    padding: 12px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer .socialmedia {
+    display: flex;
+    align-items: center;
+  }
+  
+  footer .socialmedia img {
+    width: 24px;
+    margin-left: 12px;
   }
   
