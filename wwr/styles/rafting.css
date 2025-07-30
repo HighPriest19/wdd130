@@ -198,8 +198,5 @@ footer .socialmedia {
 display: flex;
 justify-content: center;
 gap: 15px;
-}
-
-footer .socialmedia img {
-  width: 24px;
+width: 24px;
 }
