@@ -18,11 +18,10 @@
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
-  /* background-color: #fff; */
 }
 
 /* === Page Container === */
-header, main, footer {
+main, footer {
   width: 840px;
   margin: 0 auto;
 }
@@ -39,44 +38,46 @@ nav, p, section, article {
   padding: 8px;
 }
 
-.socialmedia a{
+.socialmedia a {
   text-decoration: none;
 }
-/* === Header Grid Layout === */
+
+/* === Header === */
 header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
   background-color: var(--primary-color);
-  padding: 12px;
+  padding: 12px 0;
   color: var(--secondary-color);
 }
 
-header img {
+/* === Flexbox for Logo and Nav === */
+.logo-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.logo-nav .logo {
   width: 100px;
   height: auto;
 }
 
-/* === Navigation Flex === */
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0;
+  gap: 24px;
   margin: 0;
+  padding: 0;
 }
-
-/* nav li {
-  margin: 0 10px;
-} */
 
 nav a {
   color: var(--secondary-color);
   text-decoration: none;
   font-weight: bold;
 }
-nav a:hover{
+nav a:hover {
   color: var(--accent2-color);
 }
 
@@ -84,14 +85,12 @@ nav a:hover{
 .hero {
   position: relative;
 }
-
 .hero img {
   display: block;
   width: 100%;
   height: auto;
 }
-
- h1 {
+h1 {
   position: absolute;
   top: 20px;
   width: 100%;
@@ -115,29 +114,27 @@ nav a:hover{
   border-radius: 8px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
-
 .hero article img {
   float: right;
   width: 125px;
-  /* margin-left: 12px; */
   border-radius: 8px;
 }
 
 /* === Adventure Section === */
-.history{
+.history {
   width: 100%;
   text-align: start;
 }
-.history h2{
+.history h2 {
   text-align: center;
   font-size: 35px;
   font-weight: bolder;
 }
-.history-sub{
+.history-sub {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.history-sub p{
+.history-sub p {
   background-color: var(--accent1-color);
   color: var(--accent2-color);
   border-radius: 20px;
@@ -145,35 +142,33 @@ nav a:hover{
   font-size: 16px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
-.adventures{
+
+.adventures {
   max-width: 100%;
   text-align: start;
 }
-.adventures h2{
+.adventures h2 {
   text-align: center;
   font-size: 35px;
   font-weight: bolder;
 }
-.adventure-sub{
-   display: grid;
+.adventure-sub {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.adventure-sub img{
-  width:  100%;
+.adventure-sub img {
+  width: 100%;
   height: auto;
-border: 1px solid black;
-padding: 2px;
-box-shadow: 0 0 30px gray;
+  border: 1px solid black;
+  padding: 2px;
+  box-shadow: 0 0 30px gray;
 }
- 
 .adventures figure {
   text-align: center;
 }
-
-
 .adventures figcaption {
   margin-top: 8px;
   font-size: 0.9em;
@@ -188,15 +183,177 @@ footer {
   background-color: var(--accent2-color);
   color: var(--secondary-color);
 }
-
 footer p {
   justify-content: center;
   margin: 0;
 }
-
 footer .socialmedia {
-display: flex;
-justify-content: center;
-gap: 15px;
-width: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 24px;
+}
+
+/* === Team Section === */
+.team {
+  margin: 32px auto;
+  text-align: center;
+}
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+.team-members {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.team figure {
+  flex: 1;
+  max-width: 200px;
+}
+.team img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.team figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+  color: var(--accent1-color);
+}
+
+/* === Contact Grid === */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 32px 16px;
+}
+
+/* === Contact Form === */
+.contact-form h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label {
+  margin-top: 12px;
+  font-weight: bold;
+  color: var(--accent1-color);
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  font-family: var(--body-font);
+  margin-top: 6px;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.contact-form input[type="radio"] {
+  margin-right: 8px;
+}
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: var(--accent2-color);
+}
+
+/* === Newsletter & Map Underneath Form === */
+.newsletter-map {
+  display: flex;
+  gap: 24px;
+  margin: 0 16px;
+}
+
+.newsletter-map section {
+  flex: 1;
+}
+
+/* === Newsletter === */
+.newsletter h2 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.newsletter button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.newsletter button:hover {
+  background-color: var(--accent2-color);
+}
+
+/* === Map Section === */
+.map h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--primary-color);
+}
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 6px;
+}
+
+/* === Responsive for Contact Grid === */
+@media (max-width: 768px) {
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-grid {
+    flex-direction: column;
+  }
+
+  .newsletter-map {
+    flex-direction: column;
+  }
+
+  .logo-nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
 }
