@@ -7,6 +7,7 @@
   --body-font: 'Roboto', sans-serif;
 }
 
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -18,17 +19,13 @@ body {
   color: var(--accent1-color);
 }
 
-p, label, input, textarea, button {
-  font-family: var(--body-font);
-}
-
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
 main, footer {
-  width: 840px;
+  max-width: 840px;
   margin: 0 auto;
 }
 
@@ -37,6 +34,7 @@ nav, p, section, article {
   padding: 8px;
 }
 
+/* Header */
 header {
   background-color: var(--primary-color);
   padding: 12px 0;
@@ -47,6 +45,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 840px;
+  margin: 0 auto;
   padding: 0 24px;
 }
 
@@ -71,37 +71,158 @@ nav a:hover {
   color: var(--accent2-color);
 }
 
-/* Contact Form Layout */
+/* Team Section */
+.team {
+  margin: 32px auto;
+  text-align: center;
+}
 
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.team figure {
+  flex: 1 1 200px;
+  max-width: 200px;
+  text-align: center;
+}
+
+.team img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.team figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* Contact Grid */
 .contact-grid {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin: 32px 16px;
 }
 
+/* Contact Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: var(--accent2-color);
+}
+
+.radio-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Newsletter & Map */
 .newsletter-map {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   margin: 0 16px;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--accent2-color);
-  color: var(--secondary-color);
+.newsletter,
+.map {
+  flex: 1 1 300px;
 }
 
-footer p {
-  margin: 8px 0;
-  font-size: 0.9rem;
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.newsletter button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: var(--accent2-color);
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: var(--accent2-color);
+  color: var(--secondary-color);
+  margin-top: 40px;
 }
 
 footer .socialmedia {
   display: flex;
   gap: 16px;
-  margin-bottom: 8px;
 }
 
 footer .socialmedia a img {
@@ -115,13 +236,38 @@ footer .socialmedia a img:hover {
   transform: scale(1.1);
 }
 
-/* Responsive for Mobile */
+footer a {
+  color: white;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .contact-grid, .newsletter-map {
+  .logo-nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-map {
     flex-direction: column;
   }
 
   footer {
-    font-size: 0.8rem;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
   }
 }
