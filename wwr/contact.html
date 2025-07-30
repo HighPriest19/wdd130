@@ -52,11 +52,11 @@
           <label for="email">Email Address:</label>
           <input type="email" id="email" name="email" required>
 
-          <label for="purpose">Purpose:</label>
+          <label>Purpose:</label>
           <div class="radio-group">
-            <label><input type="radio" id="inquiry" name="purpose" value="inquiry"> Inquiry</label>
-            <label><input type="radio" id="reservation" name="purpose" value="reservation"> Reservation</label>
-            <label><input type="radio" id="suggestion" name="purpose" value="suggestion"> Suggestion</label>
+            <label for="inquiry"><input type="radio" id="inquiry" name="purpose" value="inquiry"> Inquiry</label>
+            <label for="reservation"><input type="radio" id="reservation" name="purpose" value="reservation"> Reservation</label>
+            <label for="suggestion"><input type="radio" id="suggestion" name="purpose" value="suggestion"> Suggestion</label>
           </div>
 
           <label for="message">Message:</label>
@@ -83,16 +83,16 @@
 
         <section class="map">
           <h2>Our Location</h2>
+          <!-- ✅ Google Maps iframe with NO inline style or % width -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7698009218153!2d7.490089074070265!3d4.524133343967403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1067b08ab43f0151%3A0x5a3d2b0033c76860!2sUniversity%20of%20Port%20Harcourt!5e0!3m2!1sen!2sng!4v1657899876543"
-            width="100%"
-            height="300"
-            style="border:0;"
+            width="600" height="300"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </section>
+      </div>
     </div>
   </main>
 
