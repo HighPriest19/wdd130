@@ -20,16 +20,24 @@ body {
   color: var(--accent1-color);
 }
 
+/* Apply fonts to form elements and text */
+p,
+label,
+input,
+textarea,
+button {
+  font-family: var(--body-font);
+}
+
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
 /* === Page Container === */
 main, footer {
   width: 840px;
   margin: 0 auto;
-}
-
-/* === Headings === */
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
 }
 
 /* === General Spacing === */
@@ -326,7 +334,7 @@ footer .socialmedia {
 .map iframe {
   width: 100%;
   height: 300px;
-  border: none
+  border: none;
   border-radius: 6px;
 }
 
