@@ -40,3 +40,8 @@ aside {
     display: block;
     margin: 30px auto;
 }
+
+map {
+    width: 100%;
+    border: 0;
+}
