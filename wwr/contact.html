@@ -35,11 +35,11 @@
     <section class="contact-info">
       <h2>Contact Us</h2>
       <p>📞 Phone: 2349043110269</p>
-      <p>📧 Email: hinckleyolagunju@gmail.com.com</p>
+      <p>📧 Email: hinckleyolagunju@gmail.com</p>
       <p>📍 Address: 123 River Lane, Adventure Town</p>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.281929243929!2d7.478248015268043!3d9.057850893505957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0ba76d45fedd%3A0x1e8e5bfbf47e1176!2sAbuja!5e0!3m2!1sen!2sng!4v1625324093923!5m2!1sen!2sng"
-        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+        width="100%" height="350" allowfullscreen="" loading="lazy">
       </iframe>
     </section>
 
@@ -54,6 +54,10 @@
         <img src="images/team.jpg" alt="Team member 2">
         <figcaption>Jake - Safety Officer</figcaption>
       </figure>
+      <figure>
+        <img src="images/team.jpg" alt="Team member 3">
+        <figcaption>Amaka - Reservation Manager</figcaption>
+      </figure>
     </section>
 
     <!-- Contact Form -->
@@ -66,22 +70,20 @@
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="purpose">Purpose</label>
-        <select id="purpose" name="purpose">
-          <option value="general">General Inquiry</option>
-          <option value="reservation">Reservation Question</option>
-          <option value="feedback">Website Suggestion</option>
-        </select>
+        <p>Purpose of Message:</p>
+        <label><input type="radio" name="purpose" value="general" required> General Inquiry</label><br>
+        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label><br>
+        <label><input type="radio" name="purpose" value="feedback"> Website Suggestion</label>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5"></textarea>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
         <label>
           <input type="checkbox" name="subscribe">
           Please subscribe me to the monthly newsletter
         </label>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Send Message</button>
       </form>
     </section>
   </main>
@@ -100,6 +102,7 @@
         <img src="https://cdn.simpleicons.org/x/000000/ffffff" alt="X (Twitter) logo" width="24" />
       </a>
     </nav>
+    <p><a href="https://app.moqups.com/2G0HmESGIMCLTkJSQ2wDNrLYVuxlFSQA/view/page/ad12de680" target="_blank">View Contact Page Wireframe</a></p>
   </footer>
 </body>
 </html>
