@@ -565,3 +565,45 @@ th {
   background-color: var(--primary-color);
   color: white;
 }
+
+header, footer {
+  width: 100%;
+  background-color: var(--primary-color); 
+  color: white; 
+  padding: 1rem 0;
+}
+
+header .logo-nav,
+footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team img {
+  width: 250px;     
+  height: 180px;     
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.team img:hover {
+  transform: scale(1.05);
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+
+
